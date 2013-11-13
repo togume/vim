@@ -17,6 +17,8 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'git://git.wincent.com/command-t.git'
 NeoBundle 'SirVer/ultisnips'
+"NeoBundle 'MarcWeber/ultisnips'
+NeoBundle 'honza/vim-snippets'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-unimpaired'
@@ -24,6 +26,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'moll/vim-node'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'godlygeek/tabular'
 
 " Turn on line numbering. Turn it off with "set nonu" 
 set nu 
