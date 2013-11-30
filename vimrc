@@ -27,6 +27,7 @@ NeoBundle 'moll/vim-node'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'godlygeek/tabular'
+NeoBundle 'junegunn/seoul256.vim'
 
 " Turn on line numbering. Turn it off with "set nonu" 
 set nu 
@@ -56,6 +57,7 @@ set lbr
 set t_Co=256
 
 colorscheme xoria256
+"colorscheme seoul256
 "colorscheme hemisu
 "colorscheme mango
 "colorscheme grb4
