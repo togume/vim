@@ -28,6 +28,7 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'junegunn/seoul256.vim'
+NeoBundle 'digitaltoad/vim-jade'
 
 " Turn on line numbering. Turn it off with "set nonu" 
 set nu 
