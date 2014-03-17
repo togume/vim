@@ -14,6 +14,9 @@ This repo holds the configuration of Vim used as the primary IDE for development
 # Installation
 * Clone repo into home directory as ~/.vim
 	* `cd ~ && git clone git@github.com:togume/vim.git .vim`
+* Install NeoBundle
+	* `mkdir -p ~/.vim/bundle`
+	* `git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim`
 * Create soft-link of vimrc in home directory
 	* `ln -s ~/.vim/vimrc ~/.vimrc`
 * Open vim
