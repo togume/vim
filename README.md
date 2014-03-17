@@ -7,13 +7,14 @@ This repo holds the configuration of Vim used as the primary IDE for development
 * [Homebrew](http://brew.sh/) - OSX Package manager
 * Upgraded version of VIM (through Homebrew)
 * Upgraded version of Git (through Homebrew)
+* VIM 7.3.584+ (YCM dependency)
 
 # Recommended
 * [RVM](https://rvm.io/) - Ruby environment manager
 
 # Installation
 * Clone repo into home directory as ~/.vim
-	* `cd ~ && git clone git@github.com:togume/vim.git .vim`
+	* `git clone https://github.com/togume/vim.git ~/.vim`
 * Install NeoBundle
 	* `mkdir -p ~/.vim/bundle`
 	* `git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim`
@@ -21,3 +22,8 @@ This repo holds the configuration of Vim used as the primary IDE for development
 	* `ln -s ~/.vim/vimrc ~/.vimrc`
 * Open vim
 * Execute `NeoBundleInstall`
+* Compile YouCompleteMe
+	* `~/.vim/bundle/YouCompleteMe`
+	* `./install.sh`
+* Commant-T installation
+	* TODO
