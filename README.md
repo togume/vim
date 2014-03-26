@@ -26,4 +26,4 @@ This repo holds the configuration of Vim used as the primary IDE for development
 	* `~/.vim/bundle/YouCompleteMe`
 	* `./install.sh`
 * Commant-T installation
-	* TODO
+	* `cd ~/.vim/bundle/command-t/ruby/command-t/ && ruby extconf.rb && make`
