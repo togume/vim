@@ -13,6 +13,10 @@ This repo holds the configuration of Vim used as the primary IDE for development
 * [RVM](https://rvm.io/) - Ruby environment manager
 
 # Installation
+* __IMPORTANT:__ if using RVM, ensure that the system ruby version is being used. This is important when vim is installed (through brew) as well as when compiling any modules/tools.
+	* `rvm use system`
+* Install VIM using homebrew
+	* `brew install vim`
 * Clone repo into home directory as ~/.vim
 	* `git clone https://github.com/togume/vim.git ~/.vim`
 * Install NeoBundle
@@ -22,8 +26,9 @@ This repo holds the configuration of Vim used as the primary IDE for development
 	* `ln -s ~/.vim/vimrc ~/.vimrc`
 * Open vim
 * Execute `NeoBundleInstall`
+	* `:NeoBundleInstall`
 * Compile YouCompleteMe
-	* `~/.vim/bundle/YouCompleteMe`
-	* `./install.sh`
+	* `cd ~/.vim/bundle/YouCompleteMe && ./install.sh`
 * Commant-T installation
-	* `cd ~/.vim/bundle/command-t/ruby/command-t/ && ruby extconf.rb && make`
+	* `cd ~/.vim/bundle/command-t/ruby/command-t/ && ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future" ruby extconf.rb && make`
+		* __note:__ the ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future" environment variable needs to be injected to get past the current issue with **clang** [read more](https://langui.sh/2014/03/10/wunused-command-line-argument-hard-error-in-future-is-a-harsh-mistress/).
