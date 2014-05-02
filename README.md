@@ -3,6 +3,8 @@ Vim
 
 This repo holds the configuration of Vim used as the primary IDE for development projects in a variety of languages. This project initially used Pathogen as the tool to manage external plugins and configurations, but recently migrated to using [NeoBundle](https://github.com/Shougo/neobundle.vim).
 
+If you'd like to add/modify packages, all you have to do is modify the vimrc file, and run the appropriate NeoBundle commands from within VIM (check out the documentation link above).
+
 # Prerequisites
 * [Homebrew](http://brew.sh/) - OSX Package manager
 * Upgraded version of VIM (through Homebrew)
@@ -24,9 +26,10 @@ This repo holds the configuration of Vim used as the primary IDE for development
 	* `git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim`
 * Create soft-link of vimrc in home directory
 	* `ln -s ~/.vim/vimrc ~/.vimrc`
-* Open vim
-* Execute `NeoBundleInstall`
-	* `:NeoBundleInstall`
+* Install plugins/packages with NeoBundle
+	* Open VIM
+	* Execute `NeoBundleInstall`
+		* `:NeoBundleInstall`
 * Compile YouCompleteMe
 	* `cd ~/.vim/bundle/YouCompleteMe && ./install.sh`
 * Commant-T installation
