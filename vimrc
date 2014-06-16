@@ -29,6 +29,8 @@ NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'junegunn/seoul256.vim'
 NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'captbaritone/better-indent-support-for-php-with-html'
+NeoBundle 'briancollins/vim-jst'
 
 " Turn on line numbering. Turn it off with "set nonu" 
 set nu 
