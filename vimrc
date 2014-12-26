@@ -1,9 +1,17 @@
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
 if has('vim_starting')
- set nocompatible               " Be iMproved
- set runtimepath+=~/.vim/bundle/neobundle.vim/
+	if &compatible
+		set nocompatible               " Be iMproved
+	endif
+
+	" Required:
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -32,6 +40,8 @@ NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'captbaritone/better-indent-support-for-php-with-html'
 NeoBundle 'briancollins/vim-jst'
 NeoBundle 'walm/jshint.vim'
+
+call neobundle#end()
 
 " Turn on line numbering. Turn it off with "set nonu" 
 set nu 
