@@ -1,14 +1,23 @@
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
 if has('vim_starting')
- set nocompatible               " Be iMproved
- set runtimepath+=~/.vim/bundle/neobundle.vim/
+	if &compatible
+		set nocompatible               " Be iMproved
+	endif
+
+	" Required:
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
+" Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
+" Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Required install
+" Required Vimproc install
 NeoBundle 'Shougo/vimproc.vim', {
 			\ 'build' : {
 			\     'windows' : 'tools\\update-dll-mingw',
