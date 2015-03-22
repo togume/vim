@@ -50,6 +50,7 @@ NeoBundle 'briancollins/vim-jst'
 NeoBundle 'walm/jshint.vim'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'justinj/vim-react-snippets'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 
 call neobundle#end()
 
@@ -62,6 +63,7 @@ syntax on
 " Indent automatically depending on filetype
 filetype indent on
 set ai
+set expandtab
 set shiftwidth=2
 set softtabstop=2
 
