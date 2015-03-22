@@ -48,6 +48,8 @@ NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'captbaritone/better-indent-support-for-php-with-html'
 NeoBundle 'briancollins/vim-jst'
 NeoBundle 'walm/jshint.vim'
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'justinj/vim-react-snippets'
 
 call neobundle#end()
 
