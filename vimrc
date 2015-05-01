@@ -51,6 +51,9 @@ NeoBundle 'walm/jshint.vim'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'justinj/vim-react-snippets'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'Slava/tern-meteor'
+NeoBundle 'tpope/vim-surround'
 
 call neobundle#end()
 
