@@ -54,6 +54,7 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'Slava/tern-meteor'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'pascoual/meteor-vim-ultisnips'
 
 call neobundle#end()
 
@@ -115,6 +116,7 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsListSnippets="<c-l>"
+let g:UltiSnipsSnippetDir="~/.vim/bundle/meteor-vim-ultisnips/"
 
 " Change leader key
 :let mapleader = ","
