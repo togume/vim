@@ -57,6 +57,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'pascoual/meteor-vim-ultisnips'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'rizzatti/dash.vim'
 
 call neobundle#end()
 
