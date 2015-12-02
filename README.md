@@ -31,7 +31,7 @@ If you'd like to add/modify packages, all you have to do is modify the vimrc fil
 	* Execute `NeoBundleInstall`
 		* `:NeoBundleInstall`
 * Compile YouCompleteMe
-	* `cd ~/.vim/bundle/YouCompleteMe && ./install.sh`
+	* `cd ~/.vim/bundle/YouCompleteMe && ./install.py`
 * Commant-T installation
 	* `cd ~/.vim/bundle/command-t/ruby/command-t/ && ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future" ruby extconf.rb && make`
 		* __note:__ the ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future" environment variable needs to be injected to get past the current issue with **clang** [read more](https://langui.sh/2014/03/10/wunused-command-line-argument-hard-error-in-future-is-a-harsh-mistress/).
