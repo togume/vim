@@ -10,6 +10,7 @@ If you'd like to add/modify packages, all you have to do is modify the vimrc fil
 * Upgraded version of VIM (through Homebrew)
 * Upgraded version of Git (through Homebrew)
 * VIM 7.3.584+ (YCM dependency)
+* `cmake` which can be installed with the Homebrew, or other methods
 
 # Recommended
 * [RVM](https://rvm.io/) - Ruby environment manager
@@ -17,7 +18,7 @@ If you'd like to add/modify packages, all you have to do is modify the vimrc fil
 # Installation
 * __IMPORTANT:__ if using RVM, ensure that the system ruby version is being used. This is important when vim is installed (through brew) as well as when compiling any modules/tools.
 	* `rvm use system`
-* Install VIM using homebrew
+* Install VIM using Homebrew
 	* `brew install vim`
 * Clone repo into home directory as ~/.vim
 	* `git clone https://github.com/togume/vim.git ~/.vim`
@@ -30,7 +31,7 @@ If you'd like to add/modify packages, all you have to do is modify the vimrc fil
 	* Open VIM
 	* Execute `NeoBundleInstall`
 		* `:NeoBundleInstall`
-* Compile YouCompleteMe
+* Compile YouCompleteMe 
 	* `cd ~/.vim/bundle/YouCompleteMe && ./install.py`
 * Commant-T installation
 	* `cd ~/.vim/bundle/command-t/ruby/command-t/ && ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future" ruby extconf.rb && make`
