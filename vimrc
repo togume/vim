@@ -4,12 +4,12 @@ if &compatible
   set nocompatible
 endif
 " Add the dein installation directory into runtimepath
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.vim/bundles/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein')
+if dein#load_state('~/.vim/bundles/dein')
+  call dein#begin('~/.vim/bundles/dein')
 
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('~/.vim/bundles/dein/repos/github.com/Shougo/dein.vim')
 
   " My Plugins
   call dein#add('scrooloose/nerdtree')
