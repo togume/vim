@@ -1,74 +1,62 @@
-" Note: Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
+" Begin Dein.vim - https://github.com/Shougo/dein.vim
 
-if has('vim_starting')
-	if &compatible
-		set nocompatible               " Be iMproved
-	endif
+if &compatible
+  set nocompatible
+endif
+" Add the dein installation directory into runtimepath
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-	" Required:
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
+
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+  " My Plugins
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('scrooloose/syntastic')
+  call dein#add('scrooloose/nerdcommenter')
+  call dein#add('godlygeek/tabular')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('tpope/vim-unimpaired')
+  call dein#add('Shougo/deoplete.nvim')
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('wincent/Command-T')
+  call dein#add('kchmck/vim-coffee-script')
+  call dein#add('moll/vim-node')
+  call dein#add('pangloss/vim-javascript')
+  call dein#add('jelera/vim-javascript-syntax')
+  call dein#add('junegunn/seoul256.vim')
+  call dein#add('digitaltoad/vim-jade')
+  call dein#add('captbaritone/better-indent-support-for-php-with-html')
+  call dein#add('briancollins/vim-jst')
+  call dein#add('walm/jshint.vim')
+  call dein#add('mxw/vim-jsx')
+  " call dein#add('justinj/vim-react-snippets')
+  call dein#add('nathanaelkane/vim-indent-guides')
+  call dein#add('marijnh/tern_for_vim')
+  call dein#add('Slava/tern-meteor')
+  call dein#add('tpope/vim-surround')
+  " call dein#add('pascoual/meteor-vim-ultisnips')
+  call dein#add('plasticboy/vim-markdown')
+  call dein#add('jiangmiao/auto-pairs')
+  call dein#add('rizzatti/dash.vim')
+
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+
+  call dein#end()
+  call dein#save_state()
 endif
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" Required Vimproc install
-NeoBundle 'Shougo/vimproc.vim', {
-			\ 'build' : {
-			\     'windows' : 'tools\\update-dll-mingw',
-			\     'cygwin' : 'make -f make_cygwin.mak',
-			\     'mac' : 'make -f make_mac.mak',
-			\     'linux' : 'make',
-			\     'unix' : 'gmake',
-			\    },
-			\ }
-
-" My Bundles
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'wincent/Command-T'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'moll/vim-node'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'junegunn/seoul256.vim'
-NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'captbaritone/better-indent-support-for-php-with-html'
-NeoBundle 'briancollins/vim-jst'
-NeoBundle 'walm/jshint.vim'
-NeoBundle 'mxw/vim-jsx'
-NeoBundle 'justinj/vim-react-snippets'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'marijnh/tern_for_vim'
-NeoBundle 'Slava/tern-meteor'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'pascoual/meteor-vim-ultisnips'
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'rizzatti/dash.vim'
-
-call neobundle#end()
+filetype plugin indent on
+syntax enable
+" End Dein.vim
 
 " Turn on line numbering. Turn it off with "set nonu" 
 set nu 
-
-" Set syntax on
-syntax on
-
-" Indent automatically depending on filetype
-filetype indent on
 set ai
 set expandtab
 set shiftwidth=2
@@ -133,14 +121,14 @@ let NERDTreeShowLineNumbers=1
 
 " Get more information into the statusline for files
 if has('statusline')
-	set laststatus=2
+  set laststatus=2
 
-	" Broken down into easily includeable segments
-	set statusline=%<%f\   " Filename
-	set statusline+=%w%h%m%r " Options
-	set statusline+=%{fugitive#statusline()} "  Git Hotness
-	set statusline+=\ [%{&ff}/%Y]            " filetype
-	set statusline+=\ [%{getcwd()}]          " current dir
-	"set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
-	set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+  " Broken down into easily includeable segments
+  set statusline=%<%f\   " Filename
+  set statusline+=%w%h%m%r " Options
+  set statusline+=%{fugitive#statusline()} "  Git Hotness
+  set statusline+=\ [%{&ff}/%Y]            " filetype
+  set statusline+=\ [%{getcwd()}]          " current dir
+  "set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
+  set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 endif
