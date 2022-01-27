@@ -1,58 +1,64 @@
 " Begin Dein.vim - https://github.com/Shougo/dein.vim
 
 if &compatible
-  set nocompatible
+  set nocompatible " Be iMproved
 endif
+
+" Required:
 " Add the dein installation directory into runtimepath
-set runtimepath+=~/.vim/bundles/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/.vim/bundles/dein')
-  call dein#begin('~/.vim/bundles/dein')
+" Required:
+call dein#begin('~/.cache/dein')
 
-  call dein#add('~/.vim/bundles/dein/repos/github.com/Shougo/dein.vim')
-
-  " My Plugins
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('scrooloose/syntastic')
-  call dein#add('scrooloose/nerdcommenter')
-  call dein#add('godlygeek/tabular')
-  call dein#add('tpope/vim-fugitive')
-  call dein#add('tpope/vim-unimpaired')
-  call dein#add('Shougo/deoplete.nvim')
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('wincent/Command-T')
-  call dein#add('kchmck/vim-coffee-script')
-  call dein#add('moll/vim-node')
-  call dein#add('pangloss/vim-javascript')
-  call dein#add('jelera/vim-javascript-syntax')
-  call dein#add('junegunn/seoul256.vim')
-  call dein#add('digitaltoad/vim-jade')
-  call dein#add('captbaritone/better-indent-support-for-php-with-html')
-  call dein#add('briancollins/vim-jst')
-  call dein#add('walm/jshint.vim')
-  call dein#add('mxw/vim-jsx')
-  " call dein#add('justinj/vim-react-snippets')
-  call dein#add('nathanaelkane/vim-indent-guides')
-  call dein#add('marijnh/tern_for_vim')
-  call dein#add('Slava/tern-meteor')
-  call dein#add('tpope/vim-surround')
-  " call dein#add('pascoual/meteor-vim-ultisnips')
-  call dein#add('plasticboy/vim-markdown')
-  call dein#add('jiangmiao/auto-pairs')
-  call dein#add('rizzatti/dash.vim')
-
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
-
-  call dein#end()
-  call dein#save_state()
+" Let dein manage dein
+call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+if !has('nvim')
+  call dein#add('roxma/nvim-yarp')
+  call dein#add('roxma/vim-hug-neovim-rpc')
 endif
 
+" My Plugins
+call dein#add('scrooloose/nerdtree')
+call dein#add('scrooloose/syntastic')
+call dein#add('scrooloose/nerdcommenter')
+call dein#add('godlygeek/tabular')
+call dein#add('tpope/vim-fugitive')
+call dein#add('tpope/vim-unimpaired')
+call dein#add('Shougo/deoplete.nvim')
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('wincent/Command-T')
+call dein#add('kchmck/vim-coffee-script')
+call dein#add('moll/vim-node')
+call dein#add('pangloss/vim-javascript')
+call dein#add('jelera/vim-javascript-syntax')
+call dein#add('junegunn/seoul256.vim')
+call dein#add('digitaltoad/vim-jade')
+call dein#add('captbaritone/better-indent-support-for-php-with-html')
+call dein#add('briancollins/vim-jst')
+call dein#add('walm/jshint.vim')
+call dein#add('mxw/vim-jsx')
+" call dein#add('justinj/vim-react-snippets')
+call dein#add('nathanaelkane/vim-indent-guides')
+call dein#add('marijnh/tern_for_vim')
+call dein#add('Slava/tern-meteor')
+call dein#add('tpope/vim-surround')
+call dein#add('plasticboy/vim-markdown')
+call dein#add('jiangmiao/auto-pairs')
+call dein#add('rizzatti/dash.vim')
+
+" Required:
+call dein#end()
+
+" Required:
 filetype plugin indent on
 syntax enable
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+" call dein#install()
+"endif
 " End Dein.vim
 
 " Turn on line numbering. Turn it off with "set nonu" 

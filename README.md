@@ -19,9 +19,8 @@ If you'd like to add/modify packages, all you have to do is modify the vimrc fil
 * Clone repo into home directory as ~/.vim
 	* `git clone https://github.com/togume/vim.git ~/.vim`
 * Install dein.vim
-	* `mkdir -p ~/.vim/bundle/dein`
-	* `curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/installer.sh && chmod +x /tmp/installer.sh`
-  * `/tmp/installer.sh ~/.vim/bundle/dein`
+	* `mkdir -p ~/.cache/dein`
+	* [Follow quick start instructions from Dein](https://github.com/Shougo/dein.vim#quick-start)
 * Create soft-link of vimrc in home directory
 	* `ln -s ~/.vim/vimrc ~/.vimrc`
 * Install plugins/packages with NeoBundle
