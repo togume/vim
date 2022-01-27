@@ -17,7 +17,7 @@ If you'd like to add/modify packages, all you have to do is modify the vimrc fil
 
 # Installation
 * Clone repo into home directory as ~/.vim
-	* `git clone https://github.com/togume/vim.git ~/.vim`
+	* `git clone git@github.com:togume/vim.git ~/.vim`
 * Install dein.vim
 	* `mkdir -p ~/.cache/dein`
 	* [Follow quick start instructions from Dein](https://github.com/Shougo/dein.vim#quick-start)
